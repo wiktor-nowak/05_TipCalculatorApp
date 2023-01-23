@@ -1,0 +1,340 @@
+:root {
+    --strongCyan: hsl(172, 67%, 45%);
+    --veryDarkCyan: hsl(183, 100%, 15%);
+    --darkGrayishCyan: hsl(186, 14%, 43%);
+    --grayishCyan: hsl(184, 14%, 56%);
+    --lightGrayishCyan: hsl(185, 41%, 84%);
+    --veryLightGrayishCyan: hsl(189, 41%, 97%);
+    --color_active: #9FE8DF;
+    --input_active: hsl(180, 73%, 86%);
+    font-size: 24px;
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--lightGrayishCyan);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header {
+    color: var(--veryDarkCyan);
+    width: 100%;
+    height: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    letter-spacing: 0.5rem;
+    opacity: 0.8;
+}
+
+main {
+    width: 100%;
+    height: 88%;
+    background-color: white;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.heading {
+    font-size: 0.6rem;
+    color: var(--darkGrayishCyan);
+    height: 1.2rem;
+}
+
+.insert-data {
+    width: 85%;
+    height: 64%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3% 0 4%;
+}
+
+section.bill {
+    width: 100%;
+    height: 24%;
+    position: relative;
+}
+
+.container {
+    position: relative;
+    top: 5%;
+    width: 100%;
+    height: 1.5rem;
+}
+
+.container input {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 5% 0 15%;
+    background-color: var(--veryLightGrayishCyan);
+    color: var(--veryDarkCyan);
+    border: none;
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    transform: translate(0, -50%);
+    border-radius: 5px;
+    top: 50%;
+    text-align: right;
+}
+
+.container input::placeholder {
+    color: var(--lightGrayishCyan);
+}
+
+.container input:hover {
+    border: 2px solid var(--strongCyan);
+    cursor: pointer;
+}
+
+.container input:focus {
+    background-color: var(--input_active);
+}
+
+.symbol {
+    position: absolute;
+    left: 0.5rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    transform: translate(0, -50%);
+    top: 50%;
+    z-index: 2;
+}
+
+section.tip-selection {
+    width: 100%;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.container-tips {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: stretch;
+}
+
+.tip-box {
+    position: relative;
+    width: 48%;
+    height: 28%;
+    background-color: var(--veryDarkCyan);
+    border-radius: 5px;
+    color: white;
+}
+
+.tip-box:hover {
+    background-color: var(--color_active);
+    color: var(--veryDarkCyan);
+    cursor: pointer;
+}
+
+.tip-box.marked {
+    color: var(--veryDarkCyan);
+    background-color: var(--strongCyan);
+}
+
+.tip-box p {
+    font-size: 0.85rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.light-tip-box {
+    background-color: var(--veryLightGrayishCyan);
+    color: var(--darkGrayishCyan);
+}
+
+.light-tip-box .container {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.light-tip-box .container input::placeholder {
+    opacity: 0.9;
+    color: var(--darkGrayishCyan);
+}
+
+section.splitters {
+    width: 100%;
+    height: 24%;
+    padding: 2% 0 0;
+    position: relative;
+}
+
+section.splitters p {
+    font-size: 0.6rem;
+    color: #B57B6D;
+    height: 1.2rem;
+    position: absolute;
+    padding: 5% 0 0;
+    top: 2%;
+    right: 0;
+    z-index: 2;
+}
+
+.alert-hold {
+    display: none;
+}
+
+.red-alert {
+    border: 2px solid #B57B6D;
+    border-radius: 5px;
+}
+
+.field-focus {
+    border: 2px solid var(--strongCyan);
+}
+
+.calculation-window {
+    background-color: var(--veryDarkCyan);
+    border-radius: 15px;
+    width: 85%;
+    height: 32%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
+}
+
+.output-style {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 5%;
+    padding: 3% 5%;
+}
+
+.output-style div {
+    position: relative;
+}
+
+.output-style div h2 {
+    font-size: 0.5rem;
+    color: white;
+}
+
+.output-style div p {
+    position: relative;
+    top: 0.2rem;
+    font-size: 0.4rem;
+    color: var(--darkGrayishCyan);
+}
+
+.output-style div:first-child {
+    width: 40%;
+}
+
+.output-style div:last-child {
+    text-align: right;
+    color: var(--strongCyan);
+    font-size: 1.2rem;
+    width: 60%;
+}
+
+.reset {
+    position: absolute;
+    bottom: 1rem;
+    left: 5%;
+    display: block;
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+    height: 1.6rem;
+    font-size: 0.8rem;
+    color: var(--veryDarkCyan);
+    background-color: var(--strongCyan);
+    text-transform: uppercase;
+}
+
+.reset:hover {
+    background-color: var(--color_active);
+    cursor: pointer;
+}
+
+.attribution {
+    width: 100%;
+    height: 0.8rem;
+    font-size: 0.4rem;
+    text-align: center;
+    position: absolute;
+    bottom: 0.1rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media only screen and (min-width: 750px) {
+    body {
+        justify-content: center;
+    }
+
+    main {
+        width: 70%;
+        height: 60%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        border-radius: 20px;
+    }
+
+    .insert-data {
+        width: 50%;
+        height: 95%;
+    }
+
+    .calculation-window {
+        width: 40%;
+        height: 85%;
+    }
+
+    .output-style {
+        height: 3rem;
+    }
+
+    .container-tips {
+        width: 100%;
+        height: 60%;
+    }
+
+    .tip-box {
+        position: relative;
+        width: 30%;
+        height: 35%;
+    }
+}

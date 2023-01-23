@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+
+<body>
+
+  <header>
+    SPLI<br>TTER
+  </header>
+  <main>
+    <div class="insert-data">
+
+      <section class="bill">
+        <h2 class="heading">Bill</h2>
+        <div class="container">
+          <img class="symbol" src="./images/icon-dollar.svg" alt="">
+          <input type="text" name="insert-bill" id="insert-bill" placeholder="0">
+        </div>
+      </section>
+
+      <section class="tip-selection">
+        <h2 class="heading">Select Tip %</h2>
+        <div class="container-tips">
+          <div data-tip class="tip-box">
+            <p>5%</p>
+          </div>
+          <div data-tip class="tip-box">
+            <p>10%</p>
+          </div>
+          <div data-tip class="tip-box">
+            <p>15%</p>
+          </div>
+          <div data-tip class="tip-box">
+            <p>25%</p>
+          </div>
+          <div data-tip class="tip-box">
+            <p>50%</p>
+          </div>
+          <div class="tip-box light-tip-box">
+            <div class="container">
+              <input type="text" name="tip-value" id="tip-custom" placeholder="Custom">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="splitters">
+        <h2 class="heading">Number of People</h2>
+        <p data-alert-info class="alert-hold">Can't be zero</p>
+        <div data-people class="container">
+          <img class="symbol" src="./images/icon-person.svg" alt="">
+          <input type="text" name="insert-people" id="people" placeholder="0">
+        </div>
+      </section>
+    </div>
+
+    <div class="calculation-window">
+
+      <section class="output-style">
+        <div>
+          <h2>Tip Amount</h2>
+          <p>/ person</p>
+        </div>
+        <div class="tip-person"></div>
+      </section>
+      <section class="output-style">
+        <div>
+          <h2>Total</h2>
+          <p>/ person</p>
+        </div>
+        <div class="bill-person"></div>
+      </section>
+      <button class="reset">Reset</button>
+
+    </div>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/wiktor-nowak">Wiktor Nowak</a>.
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
