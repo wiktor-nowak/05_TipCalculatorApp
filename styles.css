@@ -178,6 +178,7 @@ section.tip-selection {
     border-radius: inherit;
     top: 50%;
     transform: translate(0, -50%);
+    font-size: 0.6rem;
 }
 
 .light-tip-box .container input::placeholder {
@@ -192,15 +193,28 @@ section.splitters {
     position: relative;
 }
 
-section.splitters p {
+.oneline-holder {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.oneline-holder h2 {
+    width: 60%;
+}
+
+.oneline-holder p {
     font-size: 0.6rem;
     color: #B57B6D;
-    height: 1.2rem;
-    position: absolute;
+    height: 100%;
+    width: 40%;
+    position: relative;
+    top: 0.2rem;
+    /* height: 1.2rem; */
+    /* position: absolute;
     padding: 5% 0 0;
     top: 0;
     right: 0;
-    z-index: 2;
+    z-index: 2; */
 }
 
 .alert-hold {
