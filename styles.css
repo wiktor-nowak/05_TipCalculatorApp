@@ -209,12 +209,7 @@ section.splitters {
     width: 40%;
     position: relative;
     top: 0.2rem;
-    /* height: 1.2rem; */
-    /* position: absolute;
-    padding: 5% 0 0;
-    top: 0;
-    right: 0;
-    z-index: 2; */
+    text-align: right;
 }
 
 .alert-hold {
@@ -238,7 +233,6 @@ section.splitters {
     display: flex;
     position: relative;
     flex-direction: column;
-
 }
 
 .output-style {
